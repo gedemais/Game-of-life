@@ -6,7 +6,7 @@
 /*   By: demaisonclaire <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 22:41:19 by demaisonc         #+#    #+#             */
-/*   Updated: 2018/11/11 11:57:23 by demaisonc        ###   ########.fr       */
+/*   Updated: 2018/11/18 19:08:42 by demaisonc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ char	**ft_aleatab(char **tab, int fill, int size_map)
 
 void	ft_jdlv(char **argv)
 {
-	printf("There\n");
 	char	**tab;
 	int		i;
 	int		nb_cycles;
@@ -83,11 +82,13 @@ void	ft_jdlv(char **argv)
 		nanosleep(&tim, &tim2);
 		i++;
 	}
+	free(tab);
 }
 
 int		main(int argc, char **argv)
 {
 	if (argc == 6)
 		ft_jdlv(argv);
+	while(1);
 	return (0);
 }
